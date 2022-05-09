@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+span{
+    color: #207fbe;
+    font-weight: bold;
+}
+h1, h2{
+    color: #fff;
+    margin-bottom: 20px;
+}
+#btn{
+    display: none;
+}
+body{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body header nav{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body header nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+body header nav a{
+    color: #207fbe;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+}
+body header img{
+    width: 100px;   
+}
+main{
+    width: 100%;
+}
+main #topo, main #sobre, main #servicos, main #corretores, main #contato{
+    margin: 100px 0;
+}
+main #topo img{
+    width: 100%;
+}
+main #sobre h1,
+main #sobre h2{
+    text-align: center;
+}
+main #sobre, main #servicos, main #corretores, main #contato{
+    margin-top: 200px;
+}
+main #sobre, main #corretores{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #207fbe;
+    padding: 50px 0;
+}
+main #sobre div, main #corretores div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+main #sobre div figure img, main #sobre div p, main #corretores div figure img, main #corretores div p{
+    width: 500px;
+    border-radius: 5px;   
+}
+main #sobre div p, main #corretores div p{
+    background-color: #fff;
+    padding: 20px;   
+}
+main #servicos{
+    background-color: #207fbe;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+}
+main #servicos div{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+main #servicos ul{
+    width: 200px;
+}
+main #servicos h2, main #servicos p, main #servicos ul li{
+    color: #fff;
+    text-align: justify;
+}
+main #servicos p, main #servicos ul li{
+    line-height: 3rem;
+    font-size: 17px;
+}
+main #servicos ul li{
+    font-size: 20px;
+    font-weight: bold;
+}
+main #contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main #contato h2{
+    color: #207fbe;
+}
+main #contato iframe{
+    margin-bottom: 100px;
+}
+main #contato ul{
+    margin-top: 50px;
+}
+footer{
+    background-color: #207fbe;
+    width: 100%;
+    height: 70px;
+}
+/*MEDIA QUERY*/
+@media(max-width:1024px){
+    main #sobre div figure img, main #sobre div p, main #corretores div figure img, main #corretores div p{
+        width: 400px;        
+    }   
+}
+@media(max-width:860px){
+    main #sobre img, main #sobre p, main #corretores img, main #corretores p{
+        width: 360px;
+    }
+    main #sobre div, main #corretores div{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    main #servicos{
+        display: flex;        
+        align-items: baseline;
+        flex-direction: column;
+    }
+    main #servicos p, main #servicos ul li{
+        line-height: 2em;
+        padding-left: 50px;
+    }
+    main #servicos ul{
+        list-style: square;
+    }
+}
+@media(max-width:720px){
+    #btn{		
+		display: flex;
+		position: absolute;
+		right: 5px;
+		top: 30px;
+		border: none;
+		cursor: pointer;
+		border-radius: 5px;
+		padding: 5px;
+        background:none;
+        color:#207fbe;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 50px;
+        height: 50px;
+
+		
+	}
+   
+    #menu{
+		display: flex;
+		visibility: hidden;
+		position: absolute;
+		width: 100%;
+		top: 100px;
+		right: 0;
+		flex-direction: column;
+        justify-content: center;
+		align-items: center;
+		background-color:#fff;
+		height:0;
+		transition: all  .1s;
+		z-index: 1000;
+		overflow-y: auto;
+		padding: 0;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+        
+	}
+    #menu li{
+        padding: .5rem;
+        display: flex;
+        line-height: 5rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+	#nav.active #menu{
+		height:100vh;
+		display: block;
+		visibility: visible;
+		overflow-y:visible;
+		
+	}
+    
+}
